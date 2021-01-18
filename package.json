@@ -10,7 +10,8 @@
   "scripts": {
     "server-dev": "nodemon server/server.js",
     "dev-server": "webpack serve --mode development --port 3001",
-    "react-dev": "webpack -w"
+    "react-dev": "webpack -w",
+    "seed": "node database/seed.js"
   },
   "dependencies": {
     "@babel/core": "^7.12.10",
@@ -22,6 +23,7 @@
     "express": "^4.17.1",
     "faker": "^5.1.0",
     "jquery": "^3.5.1",
+    "mongoose": "^5.11.12",
     "nodemon": "^2.0.7",
     "path": "^0.12.7",
     "react": "^17.0.1",
