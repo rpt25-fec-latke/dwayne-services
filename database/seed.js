@@ -3,12 +3,6 @@ const faker = require('faker');
 
 mongoose.connect('mongodb://localhost/metadata', {useNewUrlParser: true, useUnifiedTopology: true});
 
-const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error: '));
-db.once('open', function() {
-
-});
-
 //create our metadata Schema
 const metaSchema = new mongoose.Schema({
     gameId: Number,
@@ -31,6 +25,14 @@ const metaSchema = new mongoose.Schema({
 // Create our metadata model
 // Models are constructors compiled from Schemas. An instance of a model is called a document
 const metaModel = mongoose.model('metaModel', metaSchema);
+
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error: '));
+db.once('open', function() {
+
+
+
+
 
 // let languageArray = () => {
 //     let array = ['Spanish', 'French', 'Chinese', 'German'];
@@ -73,4 +75,15 @@ const metaModel = mongoose.model('metaModel', metaSchema);
             if (err) return handleError(err);
         });
     }
+    console.log('Database populated');
 })();
+
+});
+
+// mongoose.connection.close()
+//     .then((response) => {
+//         console.log('Connection closed: ', response);
+//     })
+//     .catch((error) => {
+//         console.error(error);
+//     })

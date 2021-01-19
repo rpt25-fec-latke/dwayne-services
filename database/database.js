@@ -26,4 +26,8 @@ const metadata = new mongoose.Schema({
   earlyAccessDate: Date
 })
 
-module.exports = db
+const getGame = () => {
+
+}
+
+module.exports = db, getGame

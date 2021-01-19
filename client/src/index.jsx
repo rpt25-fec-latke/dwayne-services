@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Metadata from "./components/Metadata.jsx";
 
 class App extends React.Component {
   constructor(props) {
@@ -7,8 +8,8 @@ class App extends React.Component {
   }
   render() {
       return (
-        <div>Hello
-          <p></p>
+        <div>
+            <Metadata />
         </div>
       )
     }
