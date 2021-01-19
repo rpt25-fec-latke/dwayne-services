@@ -2,7 +2,7 @@ import React from "react";
 
 const Options = (props) => {
     return(
-        <div></div>
+        <div>This is a placeholder for my Options</div>
     )
 }
 

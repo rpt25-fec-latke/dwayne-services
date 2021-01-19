@@ -9,7 +9,6 @@
   },
   "scripts": {
     "server-dev": "nodemon server/server.js",
-    "dev-server": "webpack serve --mode development --port 3001",
     "react-dev": "webpack --mode development -w",
     "seed": "node database/seed.js",
     "test": "jest"

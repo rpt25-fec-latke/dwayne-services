@@ -1,9 +1,11 @@
 import React from "react";
+import Options from "./Options.jsx";
 
 class Metadata extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            error: null,
             isLoaded: false,
             metadata: []
         }
@@ -34,16 +36,19 @@ class Metadata extends React.Component {
             )
     }
     render() {
+        const { error, isLoaded, metadata } = this.state;
+        if (error) {
+            console.log(error)
+            return <div>Error: {error.message}</div>;
+        } else if (!isLoaded) {
+            return <div>Loading...</div>
+        } else {
+            return (
+                <div>
 
-        let optionsList = this.state.options.map((option, i) => {
-            return <Options  props={option[i]} key={'Option' + i} />
-        })
-
-        return (
-            <div>
-                {optionsList}
-            </div>
-        )
+                </div>
+            )
+        }
     }
 }
 

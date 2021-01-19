@@ -8,7 +8,8 @@ db.once('open', function() {
 
 });
 
-const metadata = new mongoose.Schema({
+//create our metadata Schema
+const metaSchema = new mongoose.Schema({
   gameId: Number,
   numPlayers: Number,
   onlineCoop: Boolean,
@@ -26,8 +27,21 @@ const metadata = new mongoose.Schema({
   earlyAccessDate: Date
 })
 
-const getGame = () => {
+// Create our metadata model
+// Models are constructors compiled from Schemas. An instance of a model is called a document
+const MetaModel = mongoose.model('MetaModel', metaSchema);
 
+const getGame = (callback) => {
+  MetaModel.findOne({}, function (err, metadata) {
+    if (err) {
+      console.log('Error fetching game metadata', err);
+      callback(err);
+    } else {
+      console.log('Metadata', metadata)
+      callback(null, metadata)
+    }
+  })
 }
 
-module.exports = db, getGame
+module.exports.db = db;
+module.exports.getGame = getGame;
