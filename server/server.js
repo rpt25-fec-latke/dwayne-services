@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const db = require('../database/database.js')
 const mongoose = require('mongoose');
+const utils = require('./utils.js')
 
 const app = express();
 const port = 3001;
@@ -20,8 +21,9 @@ app.get('/metadata', (req, res) => {
       console.error('Failed data retrieval', data);
       res.sendStatus(500);
     } else {
+      console.log(utils.splitData(data));
       console.log('Data after getGame / in app.get:', data);
-      res.send(data);
+      res.send();
     }
   }, res.body)
 })

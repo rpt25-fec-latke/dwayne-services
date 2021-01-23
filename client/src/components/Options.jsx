@@ -1,8 +1,9 @@
 import React from "react";
 
-const Options = (props) => {
+const Options = ({numPlayers, }) => {
     return(
-        <div>This is a placeholder for my Options</div>
+        <div className="options" >
+        </div>
     )
 }
 

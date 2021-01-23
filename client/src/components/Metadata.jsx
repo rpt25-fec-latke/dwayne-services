@@ -1,5 +1,9 @@
 import React from "react";
 import Options from "./Options.jsx";
+import Languages from "./Languages.jsx";
+import Ratings from "./Ratings.jsx";
+import InfoPanel from "./InfoPanel.jsx";
+import Links from "./Links.jsx";
 
 class Metadata extends React.Component {
     constructor(props) {
@@ -51,7 +55,11 @@ class Metadata extends React.Component {
             console.log('Metadata', metadata);
             return (
                 <div>
-
+                    <Options data={metadata} />
+                    <Languages data={metadata} />
+                    <Ratings data={metadata} />
+                    <InfoPanel data={metadata} />
+                    <Links data={metadata} />
                 </div>
             )
         }
