@@ -3,15 +3,15 @@ import ReactDOM from 'react-dom';
 import Metadata from "./components/Metadata.jsx";
 
 class App extends React.Component {
-  constructor(props) {
-    super(props)
-  }
-  render() {
-      return (
-        <div>
-            <Metadata />
-        </div>
-      )
+    constructor(props) {
+        super(props)
+    }
+    render() {
+        return (
+            <div>
+                <Metadata />
+            </div>
+        )
     }
 }
 

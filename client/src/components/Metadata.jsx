@@ -7,7 +7,7 @@ class Metadata extends React.Component {
         this.state = {
             error: null,
             isLoaded: false,
-            metadata: []
+            metadata: {}
         }
     }
 
@@ -15,10 +15,14 @@ class Metadata extends React.Component {
 
     }
     componentDidMount() {
-        fetch("/")
-            .then(res => res.json())
+        fetch("/metadata")
+            .then((res) => {
+                console.log('result of fetch:', res);
+                return res.json()
+            })
             .then(
                 (result) => {
+                    console.log('result of res.json()', result);
                     this.setState({
                         isLoaded: true,
                         metadata: result
@@ -41,8 +45,10 @@ class Metadata extends React.Component {
             console.log(error)
             return <div>Error: {error.message}</div>;
         } else if (!isLoaded) {
+            console.log('Loading');
             return <div>Loading...</div>
         } else {
+            console.log('Metadata', metadata);
             return (
                 <div>
 

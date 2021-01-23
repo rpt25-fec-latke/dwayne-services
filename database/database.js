@@ -1,11 +1,12 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/metadata', {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect('mongodb://localhost/metadata', {useNewUrlParser: true, useUnifiedTopology: true})
+    .catch(error => handleError(error));
 
 const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error: '));
+db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
-
+  console.log('We\'re connected!');
 });
 
 //create our metadata Schema
@@ -15,7 +16,7 @@ const metaSchema = new mongoose.Schema({
   onlineCoop: Boolean,
   lanCoop: Boolean,
   steamCloud: Boolean,
-  EULAnotice: Boolean,
+  eulaNotice: Boolean,
   languages: Array,
   rating: String,
   gameTitle: String,
@@ -31,11 +32,12 @@ const metaSchema = new mongoose.Schema({
 // Models are constructors compiled from Schemas. An instance of a model is called a document
 const MetaModel = mongoose.model('MetaModel', metaSchema);
 
-const getGame = (callback) => {
-  MetaModel.findOne({}, function (err, metadata) {
+const getGame = (callback, id = 1) => {
+  console.log('getGame fired')
+  MetaModel.findOne({gameId: id},null, null,  function (err, metadata) {
     if (err) {
-      console.log('Error fetching game metadata', err);
-      callback(err);
+      console.log('Error fetching game metadata', err)
+      throw err;
     } else {
       console.log('Metadata', metadata)
       callback(null, metadata)

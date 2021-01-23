@@ -2,6 +2,10 @@
   "name": "react-services",
   "version": "",
   "description": "",
+  "jest": {
+    "testEnvironment": "node",
+    "setupFilesAfterEnv": ["./setupTests.js"]
+  },
   "author": "",
   "license": "",
   "engines": {
@@ -11,12 +15,13 @@
     "server-dev": "nodemon server/server.js",
     "react-dev": "webpack --mode development -w",
     "seed": "node database/seed.js",
-    "test": "jest"
+    "test": "jest --detectOpenHandles"
   },
   "dependencies": {
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
     "@babel/preset-react": "^7.12.10",
+    "@babel/runtime": "^7.12.5",
     "babel-loader": "^8.2.2",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
@@ -26,13 +31,17 @@
     "mongoose": "^5.11.12",
     "nodemon": "^2.0.7",
     "path": "^0.12.7",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
+    "react": "16.14.0",
+    "react-dom": "16.14.0",
     "webpack-dev-server": "^3.11.2"
   },
   "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.12.10",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
     "jest": "^26.6.3",
+    "supertest": "^6.1.1",
     "webpack": "^5.14.0",
     "webpack-cli": "^4.3.1"
   }
