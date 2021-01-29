@@ -23,7 +23,7 @@ splitData = (result) => {
     infoPanel[4] = result.franchise;
     infoPanel[5] = result.releaseDate;
     results.push(infoPanel)
-    
+
     return results;
 }
 

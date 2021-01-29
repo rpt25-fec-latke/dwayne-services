@@ -21,9 +21,9 @@ app.get('/metadata', (req, res) => {
       console.error('Failed data retrieval', data);
       res.sendStatus(500);
     } else {
-      console.log(utils.splitData(data));
+      let splitData = utils.splitData(data);
       console.log('Data after getGame / in app.get:', data);
-      res.send();
+      res.send(splitData);
     }
   }, res.body)
 })

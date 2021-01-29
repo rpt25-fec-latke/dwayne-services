@@ -11,25 +11,32 @@ class Metadata extends React.Component {
         this.state = {
             error: null,
             isLoaded: false,
-            metadata: {}
+            gameId: null,
+            options: [],
+            languages: [],
+            rating: null,
+            infoPanel: []
         }
     }
 
     getMetadata() {
 
     }
+
     componentDidMount() {
         fetch("/metadata")
             .then((res) => {
-                console.log('result of fetch:', res);
                 return res.json()
             })
             .then(
                 (result) => {
-                    console.log('result of res.json()', result);
                     this.setState({
-                        isLoaded: true,
-                        metadata: result
+                        gameId: result[0],
+                        options: result[1],
+                        languages: result[2],
+                        rating: result[3],
+                        infoPanel: result[4],
+                        isLoaded: true
                     });
                 },
                 // Note: it's important to handle errors here
@@ -52,14 +59,13 @@ class Metadata extends React.Component {
             console.log('Loading');
             return <div>Loading...</div>
         } else {
-            console.log('Metadata', metadata);
             return (
                 <div>
-                    <Options data={metadata} />
-                    <Languages data={metadata} />
-                    <Ratings data={metadata} />
-                    <InfoPanel data={metadata} />
-                    <Links data={metadata} />
+                    <Options id={this.state.gameId} options={this.state.options} />
+                    <Languages id={this.state.gameId} languages={this.state.languages}/>
+                    <Ratings id={this.state.gameId} rating={this.state.rating} />
+                    <InfoPanel id={this.state.gameId} infoPanel={this.state.infoPanel} />
+                    <Links id={this.state.gameId} />
                 </div>
             )
         }
