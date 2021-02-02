@@ -5,13 +5,40 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  width: 308px;
+  align-items: center;
   background: #1b2838;  
 `
 
 //* Options
+export const EvenBiggerContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  background: #0f161f;
+  padding: 16px;
+`
+
+export const OptContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  background: #0f161f;
+  height: 26px;
+  width: 276px;
+  padding-bottom: 2px;
+`
+export const OptPictureBox = styled.div`
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 26px;
+  background: #111923;
+  width: 30px;
+`
 export const OptionsBox = styled.div`
-  width: 223px;
+  width: 243px;
   color: #67c1f5;
   background: #67c1f5;
   opacity: 10%;

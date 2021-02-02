@@ -1,28 +1,38 @@
 import React from "react";
-import { ColoredText, OptionsBox, OptionsIcon } from "./styles/styles";
+import { EvenBiggerContainer, ColoredText, OptContainer, OptionsBox, OptionsIcon, OptPictureBox } from "./styles/styles";
 
 const Options = ({gameId, options}) => {
     console.log('options', options)
     return(
         <div className="options" >
-            {options[0] && <div>
-                <OptionsIcon src="./images/ico_singlePlayer.png"/>
+            <EvenBiggerContainer>
+            {options[0] && <OptContainer>
+                <OptPictureBox>
+                    <OptionsIcon src="./images/ico_singlePlayer.png"/>
+                </OptPictureBox>
                 <OptionsBox>
                     <ColoredText>Single-Player</ColoredText>
                 </OptionsBox>
-            </div>}
-            {options[1] && <div>
+            </OptContainer>}
+            {options[1] && <OptContainer>
+                <OptPictureBox>
                 <OptionsIcon src="./images/ico_coop.png"/>
+                </OptPictureBox>
                 <OptionsBox>Online Co-op</OptionsBox>
-            </div>}
-            {options[2] && <div>
-                <OptionsIcon src="./images/ico_coop.png"/>
+            </OptContainer>}
+            {options[2] && <OptContainer>
+                <OptPictureBox>
+                    <OptionsIcon src="./images/ico_coop.png"/>
+                </OptPictureBox>
                 <OptionsBox>LAN Co-op</OptionsBox>
-            </div>}
-            {options[3] && <div>
-                <OptionsIcon src="./images/ico_cloud.png"/>
+            </OptContainer>}
+            {options[3] && <OptContainer>
+                <OptPictureBox>
+                    <OptionsIcon src="./images/ico_cloud.png"/>
+                </OptPictureBox>
                 <OptionsBox>Steam Cloud</OptionsBox>
-            </div>}
+            </OptContainer>}
+            </EvenBiggerContainer>
         </div>
     )
 }

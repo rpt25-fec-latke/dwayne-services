@@ -13,10 +13,10 @@ const Languages = (props) => {
                         <th>Subtitles</th>
                     </tr>
                     <tr>
-                        <td>English</td>
-                        <td>x</td>
-                        <td>x</td>
-                        <td>x</td>
+                        <td>props.languages[0]</td>
+                        <td>props.languages[1]</td>
+                        <td>props.languages[2]</td>
+                        <td>props.languages[3]</td>
                     </tr>
                 </tbody>
             </table>
