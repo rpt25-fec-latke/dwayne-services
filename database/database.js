@@ -12,7 +12,7 @@ db.once('open', function() {
 //create our metadata Schema
 const metaSchema = new mongoose.Schema({
   gameId: Number,
-  numPlayers: Number,
+  singlePlayer: Boolean,
   onlineCoop: Boolean,
   lanCoop: Boolean,
   steamCloud: Boolean,
@@ -33,13 +33,12 @@ const metaSchema = new mongoose.Schema({
 const MetaModel = mongoose.model('MetaModel', metaSchema);
 
 const getGame = (callback, id = 1) => {
-  console.log('getGame fired')
   MetaModel.findOne({gameId: id},null, null,  function (err, metadata) {
     if (err) {
-      console.log('Error fetching game metadata', err)
+      console.error('Error fetching game metadata', err)
       throw err;
     } else {
-      console.log('Metadata', metadata)
+      console.log('metadata', metadata)
       callback(null, metadata)
     }
   })

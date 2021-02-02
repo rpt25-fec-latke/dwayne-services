@@ -6,7 +6,7 @@ mongoose.connect('mongodb://localhost/metadata', {useNewUrlParser: true, useUnif
 //create our metadata Schema
 const metaSchema = new mongoose.Schema({
     gameId: Number,
-    numPlayers: Number,
+    singlePlayer: Boolean,
     onlineCoop: Boolean,
     lanCoop: Boolean,
     steamCloud: Boolean,
@@ -18,8 +18,7 @@ const metaSchema = new mongoose.Schema({
     developer: String,
     publisher: String,
     franchise: String,
-    releaseDate: Date,
-    earlyAccessDate: Date
+    releaseDate: Date
 })
 
 // Create our metadata model
@@ -44,26 +43,23 @@ db.once('open', function() {
 //     }
 // }
 
-// let earlyAccess = () => {
-//     let chance = Math.floor(Math.random() * 100 + 1);
-//     if (chance > 3) {
-//         return ;
-//     } else {
-//         return faker.date.soon();
-//     }
-// }
+const getRating = function() {
+    let rating = ['E', 'T', 'M', 'A'];
+    let index = Math.floor(Math.random() * 4);
+    return rating[index];
+};
 
 (function () {
     for (let i = 0; i < 100; i++) {
         let metaDocument = new metaModel({
             gameId: i + 1,
-            numPlayers: Math.floor(Math.random() * 2 + 1),
+            singlePlayer: faker.random.boolean(),
             onlineCoop: faker.random.boolean(),
             lanCoop: faker.random.boolean(),
             steamCloud: faker.random.boolean(),
             EULAnotice: faker.random.boolean(),
             languages: ['English', true, true, true],
-            rating: parseFloat((Math.floor(Math.random() * 35 + 1) / 10).toFixed(1)) + parseFloat(1.5),
+            rating: getRating(),
             gameTitle: faker.commerce.productName(),
             gameGenre: faker.lorem.word(),
             developer: faker.company.companyName(),

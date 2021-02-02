@@ -3,8 +3,11 @@
   "version": "",
   "description": "",
   "jest": {
+    "verbose": true,
     "testEnvironment": "node",
-    "setupFilesAfterEnv": ["./setupTests.js"]
+    "setupFilesAfterEnv": [
+      "./setupTests.js"
+    ]
   },
   "author": "",
   "license": "",
@@ -33,6 +36,7 @@
     "path": "^0.12.7",
     "react": "16.14.0",
     "react-dom": "16.14.0",
+    "styled-components": "^5.2.1",
     "webpack-dev-server": "^3.11.2"
   },
   "devDependencies": {

@@ -22,7 +22,6 @@ app.get('/metadata', (req, res) => {
       res.sendStatus(500);
     } else {
       let splitData = utils.splitData(data);
-      console.log('Data after getGame / in app.get:', data);
       res.send(splitData);
     }
   }, res.body)

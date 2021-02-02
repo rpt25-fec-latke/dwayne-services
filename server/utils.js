@@ -5,10 +5,11 @@ splitData = (result) => {
     results.push(result.gameId)
 
     let options = [];
-    options[0] = result.numPlayers;
+    options[0] = result.singlePlayer;
     options[1] = result.onlineCoop;
     options[2] = result.lanCoop;
     options[3] = result.steamCloud;
+    console.log(options)
     results.push(options);
 
     results.push(result.languages);

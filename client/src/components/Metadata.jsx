@@ -1,9 +1,10 @@
 import React from "react";
 import Options from "./Options.jsx";
 import Languages from "./Languages.jsx";
-import Ratings from "./Ratings.jsx";
+import Rating from "./Rating.jsx";
 import InfoPanel from "./InfoPanel.jsx";
 import Links from "./Links.jsx";
+import { Container } from './styles/styles'
 
 class Metadata extends React.Component {
     constructor(props) {
@@ -53,20 +54,19 @@ class Metadata extends React.Component {
     render() {
         const { error, isLoaded, metadata } = this.state;
         if (error) {
-            console.log(error)
+            console.error(error)
             return <div>Error: {error.message}</div>;
         } else if (!isLoaded) {
-            console.log('Loading');
             return <div>Loading...</div>
         } else {
             return (
-                <div>
+                <Container>
                     <Options id={this.state.gameId} options={this.state.options} />
                     <Languages id={this.state.gameId} languages={this.state.languages}/>
-                    <Ratings id={this.state.gameId} rating={this.state.rating} />
+                    <Rating id={this.state.gameId} rating={this.state.rating} />
                     <InfoPanel id={this.state.gameId} infoPanel={this.state.infoPanel} />
                     <Links id={this.state.gameId} />
-                </div>
+                </Container>
             )
         }
     }
