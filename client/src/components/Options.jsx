@@ -18,19 +18,25 @@ const Options = ({gameId, options}) => {
                 <OptPictureBox>
                 <OptionsIcon src="./images/ico_coop.png"/>
                 </OptPictureBox>
-                <OptionsBox>Online Co-op</OptionsBox>
+                <OptionsBox>
+                  <ColoredText>Online Co-Op</ColoredText>
+                </OptionsBox>
             </OptContainer>}
             {options[2] && <OptContainer>
                 <OptPictureBox>
                     <OptionsIcon src="./images/ico_coop.png"/>
                 </OptPictureBox>
-                <OptionsBox>LAN Co-op</OptionsBox>
+                <OptionsBox>
+                  <ColoredText>LAN Co-op</ColoredText>
+                </OptionsBox>
             </OptContainer>}
             {options[3] && <OptContainer>
                 <OptPictureBox>
                     <OptionsIcon src="./images/ico_cloud.png"/>
                 </OptPictureBox>
-                <OptionsBox>Steam Cloud</OptionsBox>
+                <OptionsBox>
+                  <ColoredText>Steam Cloud</ColoredText>
+                </OptionsBox>
             </OptContainer>}
             </EvenBiggerContainer>
         </div>
