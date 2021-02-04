@@ -1,3 +1,4 @@
+/* eslint-disable comma-dangle */
 const mongoose = require('mongoose');
 
 mongoose.connect('mongodb://localhost/metadata', { useNewUrlParser: true, useUnifiedTopology: true })

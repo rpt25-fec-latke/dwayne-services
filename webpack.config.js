@@ -1,6 +1,9 @@
-var path = require('path');
-var SRC_DIR = path.join(__dirname, '/client/src');
-var DIST_DIR = path.join(__dirname, '/client/dist');
+/* eslint-disable quote-props */
+/* eslint-disable comma-dangle */
+const path = require('path');
+
+const SRC_DIR = path.join(__dirname, '/client/src');
+const DIST_DIR = path.join(__dirname, '/client/dist');
 
 module.exports = {
   entry: `${SRC_DIR}/index.jsx`,
@@ -22,12 +25,12 @@ module.exports = {
           plugins: [
             ['@babel/plugin-transform-runtime',
               {
-                "absoluteRuntime": false,
-                "corejs": false,
-                "helpers": true,
-                "regenerator": true,
-                "useESModules": false,
-                "version": "7.0.0-beta.0"
+                'absoluteRuntime': false,
+                'corejs': false,
+                'helpers': true,
+                'regenerator': true,
+                'useESModules': false,
+                'version': '7.0.0-beta.0'
               }]
           ]
         }

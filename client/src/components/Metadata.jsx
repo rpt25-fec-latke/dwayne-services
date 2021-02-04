@@ -1,3 +1,4 @@
+/* eslint-disable import/extensions */
 import React from 'react';
 import Options from './Options.jsx';
 import Languages from './Languages.jsx';

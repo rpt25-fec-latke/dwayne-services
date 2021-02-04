@@ -1,18 +1,21 @@
+/* eslint-disable react/prefer-stateless-function */
+/* eslint-disable import/extensions */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Metadata from "./components/Metadata.jsx";
+import Metadata from './components/Metadata.jsx';
 
 class App extends React.Component {
-    constructor(props) {
-        super(props)
-    }
-    render() {
-        return (
-            <div>
-                <Metadata />
-            </div>
-        )
-    }
+  constructor() {
+    super(props);
+  }
+
+  render() {
+    return (
+      <div>
+        <Metadata />
+      </div>
+    );
+  }
 }
 
-ReactDOM.render(<App />, document.getElementById('app'))
+ReactDOM.render(<App />, document.getElementById('app'));
