@@ -1,31 +1,34 @@
 import React from 'react';
+import { ModuleWrapper, RatingBureau, RatingContainer, RatingDescriptors, RatingInfo } from './styles/styles';
 
-const Rating = () => {
-    return (
-        <div>
-            <div className="game_rating_details">
-                <div className="game_rating_icon">
-                    <img src="" />
-                </div>
-                <div>
-                    <div className="game_rating_descriptors">
-                        <p>
-                            Blood and Gore
-                            <br/>
-                            Partial Nudity
-                            <br/>
-                            Sexual Content
-                            <br/>
-                            Strong Language
-                            <br/>
-                            Violence
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div className="game_rating_agency"></div>
+const Rating = ({ rating }) => (
+  <ModuleWrapper>
+    <RatingContainer>
+      <RatingInfo>
+        <div className="game_rating_icon">
+          <img src="https://store.akamai.steamstatic.com/public/shared/images/game_ratings/ESRB/m.png" />
         </div>
-    )
-}
+        <div>
+          <RatingDescriptors>
+            <p>
+              Blood and Gore
+              <br />
+              Partial Nudity
+              <br />
+              Sexual Content
+              <br />
+              Strong Language
+              <br />
+              Violence
+            </p>
+          </RatingDescriptors>
+        </div>
+      </RatingInfo>
+      <RatingBureau>
+        Rating for: ESRB
+      </RatingBureau>
+    </RatingContainer>
+  </ModuleWrapper>
+);
 
 export default Rating;

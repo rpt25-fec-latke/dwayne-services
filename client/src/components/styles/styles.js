@@ -7,7 +7,7 @@ export const Container = styled.div`
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
-  background: #1b2838;  
+  width: 308px;
 `;
 
 export const ModuleWrapper = styled.div`
@@ -21,15 +21,6 @@ export const ModuleWrapper = styled.div`
 
 //* Options
 //* ------------------------------------
-export const EvenBiggerContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  background-image: linear-gradient(to right, #16212d, #0e151d);
-  padding: 16px;
-  margin-bottom: 8px;
-`;
-
 export const OptContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -63,11 +54,11 @@ export const ColoredText = styled.div`
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
   color: #67c1f5;
+  padding-left: 8px;
 `;
 
 //* Languages
 //* ------------------------------------
-
 export const LangContainer = styled.div`
 display: flex;
 flex-direction: column;
@@ -81,4 +72,58 @@ margin-bottom: 8px;
 export const TableTitle = styled.div`
   color: #8f98a0;
   font-size: 12px;
+`;
+
+//* Rating
+//* ------------------------------------
+export const RatingContainer = styled.div`
+  display: flex;
+  width: 276px;
+  flex-direction: column;
+  flex-wrap: wrap;
+`;
+
+export const RatingInfo = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+`;
+
+export const RatingIcon = styled.div`
+  height:90px;
+  width:60px;
+`;
+
+export const RatingDescriptors = styled.div`
+  text-transform: uppercase;
+  font-size: 11px;
+  padding-left: 8px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-self: flex-start;
+`;
+
+export const RatingBureau = styled.div`
+  padding-top: 6px; 
+  font-size: 12px;
+`;
+
+//* InfoPanel
+//* ------------------------------------
+export const InfoContainer = styled.div`
+  display: flex;
+  width: 276px;
+  flex-direction: column;
+  flex-wrap: wrap;
+`;
+
+export const BoldBox = styled.b`
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #556772;
+`;
+
+export const GrayText = styled.div`
+  color: #8f98a0;
 `;

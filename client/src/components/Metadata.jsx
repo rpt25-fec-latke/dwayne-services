@@ -44,7 +44,10 @@ class Metadata extends React.Component {
             error,
           });
         },
-      );
+      )
+      .then(() => {
+        document.title = `${this.state.infoPanel[0]} on Steam`;
+      });
   }
 
   render() {
@@ -64,7 +67,7 @@ class Metadata extends React.Component {
     }
     return (
       <Container>
-        <Options id={gameId} options={options} />
+        <Options options={options} />
         <Languages id={gameId} languages={languages} />
         <Rating id={gameId} rating={rating} />
         <InfoPanel id={gameId} infoPanel={infoPanel} />
