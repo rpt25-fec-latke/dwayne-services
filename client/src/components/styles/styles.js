@@ -10,6 +10,15 @@ export const Container = styled.div`
   background: #1b2838;  
 `;
 
+export const ModuleWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-image: linear-gradient(to right, #16212d, #0e151d);
+  padding: 16px;
+  margin-bottom: 8px;
+`;
+
 //* Options
 //* ------------------------------------
 export const EvenBiggerContainer = styled.div`

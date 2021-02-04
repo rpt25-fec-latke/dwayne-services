@@ -1,12 +1,12 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import {
-  EvenBiggerContainer, ColoredText, OptContainer, OptionsBox, OptionsIcon, IconWrapper,
+  ColoredText, OptContainer, OptionsBox, OptionsIcon, IconWrapper, ModuleWrapper,
 } from './styles/styles';
 
 const Options = ({ options }) => (
   <div className="options">
-    <EvenBiggerContainer>
+    <ModuleWrapper>
       {options[0] && (
         <OptContainer>
           <IconWrapper>
@@ -47,7 +47,7 @@ const Options = ({ options }) => (
           </OptionsBox>
         </OptContainer>
       )}
-    </EvenBiggerContainer>
+    </ModuleWrapper>
   </div>
 );
 
