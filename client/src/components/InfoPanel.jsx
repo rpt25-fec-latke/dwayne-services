@@ -1,34 +1,43 @@
 import React from 'react';
-import { BoldBox, Container, GrayText, InfoContainer, ModuleWrapper } from './styles/styles';
+import {
+  BoldBox, Container, GrayWrapper, InfoContainer, ModuleWrapper, LinkWrapper
+} from './styles/styles';
+import moment from 'moment';
 
 const InfoPanel = ({ infoPanel }) => (
   <Container>
     <ModuleWrapper>
       <InfoContainer>
-        <div className="block_content_inner">
-          <div className="details_block">
-            <BoldBox>Title:</BoldBox>
-            <GrayText>
-              {infoPanel[0]}
-            </GrayText>
-            <br />
-            <BoldBox>Genre:</BoldBox>
-            {infoPanel[1]}
-            <br />
-            <BoldBox>Developer:</BoldBox>
-            {infoPanel[2]}
-            <br />
-            <BoldBox>Publisher:</BoldBox>
-            {infoPanel[3]}
-            <br />
-            <BoldBox>Franchise:</BoldBox>
-            {infoPanel[4]}
-            <br />
-            <BoldBox>Release Date:</BoldBox>
-            {infoPanel[5].toLocaleString()}
-            <br />
-          </div>
-        </div>
+        <GrayWrapper>
+          <BoldBox>Title:</BoldBox>
+          {infoPanel[0]}
+          <br />
+        </GrayWrapper>
+        <LinkWrapper>
+          <BoldBox>Genre:</BoldBox>
+          {infoPanel[1]}
+          <br />
+        </LinkWrapper>
+        <LinkWrapper>
+          <BoldBox>Developer:</BoldBox>
+          {infoPanel[2]}
+          <br />
+        </LinkWrapper>
+        <LinkWrapper>
+          <BoldBox>Publisher:</BoldBox>
+          {infoPanel[3]}
+          <br />
+        </LinkWrapper>
+        <LinkWrapper>
+          <BoldBox>Franchise:</BoldBox>
+          {infoPanel[4]}
+          <br />
+        </LinkWrapper>
+        <GrayWrapper>
+          <BoldBox>Release Date:</BoldBox>
+          {moment(infoPanel[5]).format('MMM D, YYYY')}
+          <br />
+        </GrayWrapper>
       </InfoContainer>
     </ModuleWrapper>
   </Container>

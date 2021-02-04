@@ -21,14 +21,14 @@ app.get('/metadata/', (req, res) => {
   console.log('reqbody', req.body);
   console.log('reqparams', req.params);
   console.log(req.query);
-  db.getGame(1, (err, data) => {
+  let id = req.query ? req.query.id : 1;
+  db.getGame(id, (err, data) => {
     if (err) {
       console.error('Failed data retrieval', err);
       res.sendStatus(500);
     } else {
       const splitData = utils.splitData(data);
       console.log('app.get', splitData);
-
       res.send(splitData);
     }
   });

@@ -6,7 +6,7 @@ const Rating = ({ rating }) => (
     <RatingContainer>
       <RatingInfo>
         <div className="game_rating_icon">
-          <img src="https://store.akamai.steamstatic.com/public/shared/images/game_ratings/ESRB/m.png" />
+          <img alt="mature rating" src="https://store.akamai.steamstatic.com/public/shared/images/game_ratings/ESRB/m.png" />
         </div>
         <div>
           <RatingDescriptors>

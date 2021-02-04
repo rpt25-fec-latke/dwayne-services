@@ -31,6 +31,7 @@ export const OptContainer = styled.div`
   width: 276px;
   padding-bottom: 2px;
 `;
+
 export const IconWrapper = styled.div`
   display: flex;
   align-items: flex-end;
@@ -39,6 +40,7 @@ export const IconWrapper = styled.div`
   background: #111923;
   width: 30px;
 `;
+
 export const OptionsBox = styled.div`
   display: flex;
   align-items: center;
@@ -46,10 +48,12 @@ export const OptionsBox = styled.div`
   color: #67c1f5;
   background-image: linear-gradient(to right, #1a2a37, #15232d);
 `;
+
 export const OptionsIcon = styled.img`
   height: 16px;
   width: 26px;
 `;
+
 export const ColoredText = styled.div`
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
@@ -114,14 +118,35 @@ export const RatingBureau = styled.div`
 export const InfoContainer = styled.div`
   display: flex;
   width: 276px;
+  line-height: 20px;
   flex-direction: column;
   flex-wrap: wrap;
 `;
 
+export const GrayWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  color: #8f98a0;
+  font-size: 12px;
+  align-items: flex-end;
+`;
+
+export const LinkWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  color: #67c1f5;
+  font-size: 12px;
+  align-items: flex-end;
+`;
+
 export const BoldBox = styled.b`
   font-size: 10px;
+  font-weight: normal;
   text-transform: uppercase;
   color: #556772;
+  padding-right: 4px;
 `;
 
 export const GrayText = styled.div`
