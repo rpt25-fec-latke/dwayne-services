@@ -31,7 +31,7 @@ export const OptContainer = styled.div`
   width: 276px;
   padding-bottom: 2px;
 `
-export const OptPictureBox = styled.div`
+export const IconWrapper = styled.div`
   display: flex;
   align-items: flex-end;
   justify-content: center;
