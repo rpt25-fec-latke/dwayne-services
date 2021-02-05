@@ -21,17 +21,6 @@ export const ModuleWrapper = styled.div`
 
 //* Options
 //* ------------------------------------
-export const EvenBiggerContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  background-image: linear-gradient(to right, #16212d, #0e151d);
-  padding: 16px;
-  margin-bottom: 8px;
-`;
-
-//* Options
-//* ------------------------------------
 export const OptContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -78,6 +67,7 @@ export const LangContainer = styled.div`
 display: flex;
 flex-direction: column;
 flex-wrap: wrap;
+width: 276px;
 /* #16212d #0e151d */
 background-image: linear-gradient(to right, #16212d, #0e151d);
 padding: 16px;
@@ -87,6 +77,24 @@ margin-bottom: 8px;
 export const TableTitle = styled.div`
   color: #8f98a0;
   font-size: 12px;
+`;
+
+export const TableWrapper = styled.table`
+  font-size: 12px;
+  border-collapse: collapse;
+`;
+
+export const TableRow = styled.tr`
+  border-bottom: 1px solid #626366;
+`;
+
+export const TableHeader = styled.th`
+  font-weight: normal;
+  border-bottom: 1px solid #626366;
+`;
+
+export const TableData = styled.td`
+  color: #67c1f5;
 `;
 
 //* Rating
@@ -114,9 +122,8 @@ export const RatingDescriptors = styled.div`
   text-transform: uppercase;
   font-size: 11px;
   padding-left: 8px;
-  justify-content: flex-start;
-  align-items: flex-start;
-  align-self: flex-start;
+  bottom: 12px;
+  position: relative;
 `;
 
 export const RatingBureau = styled.div`

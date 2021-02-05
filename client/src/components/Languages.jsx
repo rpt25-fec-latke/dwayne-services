@@ -1,27 +1,27 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import { LangContainer, TableTitle } from './styles/styles';
+import { TableHeader, LangContainer, TableData, TableTitle, TableWrapper, TableRow } from './styles/styles';
 
 const Languages = ({ languages }) => (
   <div>
     <LangContainer>
       <TableTitle>Languages:</TableTitle>
-      <table>
+      <TableWrapper>
         <tbody>
-          <tr>
-            <th> </th>
-            <th>Interface</th>
-            <th>Full Audio</th>
-            <th>Subtitles</th>
-          </tr>
-          <tr>
+          <TableRow>
+            <TableHeader> </TableHeader>
+            <TableHeader>Interface</TableHeader>
+            <TableHeader>Full Audio</TableHeader>
+            <TableHeader>Subtitles</TableHeader>
+          </TableRow>
+          <TableRow>
             <td>{languages[0]}</td>
-            {languages[1] ? <td>&#10004;</td> : <td />}
-            {languages[2] ? <td>&#10004;</td> : <td />}
-            {languages[3] ? <td>&#10004;</td> : <td />}
-          </tr>
+            {languages[1] ? <TableData>&#10004;</TableData> : <TableData />}
+            {languages[2] ? <TableData>&#10004;</TableData> : <TableData />}
+            {languages[3] ? <TableData>&#10004;</TableData> : <TableData />}
+          </TableRow>
         </tbody>
-      </table>
+      </TableWrapper>
     </LangContainer>
   </div>
 );
