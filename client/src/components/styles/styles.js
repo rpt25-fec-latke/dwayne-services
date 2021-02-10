@@ -122,7 +122,7 @@ export const RatingDescriptors = styled.div`
   text-transform: uppercase;
   font-size: 11px;
   padding-left: 8px;
-  bottom: 12px;
+  bottom: 0px;
   position: relative;
 `;
 
