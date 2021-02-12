@@ -18,7 +18,7 @@
     "server-dev": "nodemon server/server.js",
     "react-dev": "webpack --mode development -w",
     "seed": "node database/seed.js",
-    "test": "jest --detectOpenHandles"
+    "test": "jest --detectOpenHandles --testPathIgnorePatterns server/backend-tests"
   },
   "dependencies": {
     "@babel/core": "^7.12.10",

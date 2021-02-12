@@ -24,7 +24,7 @@ class Metadata extends React.Component {
   componentDidMount() {
     const url = window.location.href;
     const id = url.indexOf('?id=') !== -1 ? url.slice(url.indexOf('?id=') + 4) : 1;
-    fetch(`http://localhost:3005/metadata?id=${id}`)
+    fetch(`/metadata?id=${id}`)
       .then((res) => res.json())
       .then(
         (result) => {
