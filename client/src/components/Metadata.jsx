@@ -4,7 +4,6 @@ import Options from './Options.jsx';
 import Languages from './Languages.jsx';
 import Rating from './Rating.jsx';
 import InfoPanel from './InfoPanel.jsx';
-import Links from './Links.jsx';
 import { Container } from './styles/styles';
 
 class Metadata extends React.Component {
