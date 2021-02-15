@@ -47,8 +47,8 @@ class Metadata extends React.Component {
           });
         },
       )
-      .then(() => {
-        document.title = `${this.state.infoPanel[0]} on Steam`;
+      .then(({ infoPanel } = this.state) => {
+        document.title = `${infoPanel[0]} on Steam`;
       });
   }
 

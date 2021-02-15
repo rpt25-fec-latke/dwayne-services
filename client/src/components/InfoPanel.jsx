@@ -1,8 +1,8 @@
 import React from 'react';
+import moment from 'moment';
 import {
   BoldBox, Container, GrayWrapper, InfoContainer, ModuleWrapper, LinkWrapper
 } from './styles/styles';
-import moment from 'moment';
 
 const InfoPanel = ({ infoPanel }) => (
   <Container>
