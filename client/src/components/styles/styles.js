@@ -1,9 +1,20 @@
 import styled from 'styled-components';
 
+export const CenterSection = styled.div`
+  width: 940px;
+  display: flex;
+  align-self: center;
+  flex-direction: row;
+  flex-wrap: no-wrap;
+  align-items: flex-end;
+  justify-content: flex-end;
+`;
+
 //* Metadata
 //* ------------------------------------
 export const Container = styled.div`
   display: flex;
+  align-self: flex-end;
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;

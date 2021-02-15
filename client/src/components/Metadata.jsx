@@ -4,7 +4,7 @@ import Options from './Options.jsx';
 import Languages from './Languages.jsx';
 import Rating from './Rating.jsx';
 import InfoPanel from './InfoPanel.jsx';
-import { Container } from './styles/styles';
+import { CenterSection, Container } from './styles/styles';
 
 class Metadata extends React.Component {
   constructor(props) {
@@ -68,12 +68,14 @@ class Metadata extends React.Component {
       return <div>Loading...</div>;
     }
     return (
-      <Container>
-        <Options options={options} />
-        <Languages id={gameId} languages={languages} />
-        <Rating id={gameId} rating={rating} />
-        <InfoPanel id={gameId} infoPanel={infoPanel} />
-      </Container>
+      <CenterSection>
+        <Container>
+          <Options options={options} />
+          <Languages id={gameId} languages={languages} />
+          <Rating id={gameId} rating={rating} />
+          <InfoPanel id={gameId} infoPanel={infoPanel} />
+        </Container>
+      </CenterSection>
     );
   }
 }
