@@ -8,6 +8,7 @@ export const Container = styled.div`
   flex-wrap: wrap;
   align-items: center;
   width: 308px;
+  color: #c6d4df;
 `;
 
 export const ModuleWrapper = styled.div`
@@ -86,9 +87,11 @@ export const TableWrapper = styled.table`
 
 export const TableRow = styled.tr`
   border-bottom: 1px solid #626366;
+  color: #8f98a0;
 `;
 
 export const TableHeader = styled.th`
+  color: #b0aeac;
   font-weight: normal;
   border-bottom: 1px solid #626366;
 `;
@@ -104,6 +107,7 @@ export const RatingContainer = styled.div`
   width: 276px;
   flex-direction: column;
   flex-wrap: wrap;
+  font-family: Arial, Helvetica, sans-serif;
 `;
 
 export const RatingInfo = styled.div`
@@ -122,12 +126,12 @@ export const RatingDescriptors = styled.div`
   text-transform: uppercase;
   font-size: 11px;
   padding-left: 8px;
-  bottom: 0px;
+  bottom: 12px;
   position: relative;
 `;
 
 export const RatingBureau = styled.div`
-  padding-top: 6px; 
+  padding-top: 6px;
   font-size: 12px;
 `;
 

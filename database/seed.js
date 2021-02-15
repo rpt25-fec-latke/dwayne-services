@@ -37,10 +37,29 @@ db.once('open', () => {
   //         }
   //     }
   // }
+  const getLanguages = () => {
+    const languageArray = ['Spanish', 'French', 'German', 'Polish', 'Chinese', 'Russian'];
+    let results = [['English', true, true, true]];
+    for (let language of languageArray) {
+      if (Math.floor(Math.random() * 2) + 1 > 1) {
+        let temp = [];
+        temp.push(language, true);
+        if (Math.floor(Math.random() * 10) + 1 > 7) {
+          temp.push(false);
+        } else {
+          temp.push(true)
+        }
+        temp.push(true);
+        results.push(temp);
+      }
+    }
+    return results;
+  };
+
 
   const getRating = function () {
-    const rating = ['E', 'T', 'M', 'A'];
-    const index = Math.floor(Math.random() * 4);
+    const rating = ['E', 'T', 'M'];
+    const index = Math.floor(Math.random() * 3);
     return rating[index];
   };
 
@@ -53,7 +72,7 @@ db.once('open', () => {
         lanCoop: faker.random.boolean(),
         steamCloud: faker.random.boolean(),
         EULAnotice: faker.random.boolean(),
-        languages: ['English', true, true, true],
+        languages: getLanguages(),
         rating: getRating(),
         gameTitle: faker.commerce.productName(),
         gameGenre: faker.lorem.word(),

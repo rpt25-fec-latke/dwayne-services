@@ -28,6 +28,7 @@ class Metadata extends React.Component {
       .then((res) => res.json())
       .then(
         (result) => {
+          console.log('2', result[2]);
           this.setState({
             gameId: result[0],
             options: result[1],

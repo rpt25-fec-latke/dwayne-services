@@ -21,7 +21,7 @@ app.get('/metadata/', (req, res) => {
   console.log('reqbody', req.body);
   console.log('reqparams', req.params);
   console.log(req.query);
-  let id = req.query ? req.query.id : 1;
+  const id = req.query ? req.query.id : 1;
   db.getGame(id, (err, data) => {
     if (err) {
       console.error('Failed data retrieval', err);
