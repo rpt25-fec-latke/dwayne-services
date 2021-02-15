@@ -74,7 +74,6 @@ class Metadata extends React.Component {
         <Languages id={gameId} languages={languages} />
         <Rating id={gameId} rating={rating} />
         <InfoPanel id={gameId} infoPanel={infoPanel} />
-        <Links id={gameId} />
       </Container>
     );
   }
