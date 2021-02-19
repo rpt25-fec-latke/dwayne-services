@@ -12,7 +12,7 @@ export const CenterSection = styled.div`
 
 //* Metadata
 //* ------------------------------------
-export const Container = styled.div`
+export const MDContainer = styled.div`
   display: flex;
   align-self: flex-end;
   flex-direction: column;
