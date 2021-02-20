@@ -5,7 +5,7 @@ import {
 } from './styles/styles';
 
 const InfoPanel = ({ infoPanel }) => (
-  <Container>
+  // <MDContainer>
     <ModuleWrapper>
       <InfoContainer>
         <GrayWrapper>
@@ -40,7 +40,7 @@ const InfoPanel = ({ infoPanel }) => (
         </GrayWrapper>
       </InfoContainer>
     </ModuleWrapper>
-  </Container>
+  // </Container>
 );
 
 export default InfoPanel;
